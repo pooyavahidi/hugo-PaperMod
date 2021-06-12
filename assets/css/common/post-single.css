@@ -200,10 +200,10 @@
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
-    font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
-    font-size: .78em;
-    line-height: 1.5;
-    background: var(--code-bg);
+    font-family: Consolas, Monaco, monospace;
+    font-size: 11pt;
+    line-height: 1.4;
+    /* background: var(--code-bg); */
     border-radius: 2px
 }
 
@@ -211,8 +211,8 @@
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgba(255, 255, 255, .8);
-    background: 0 0;
+    /* color: rgba(255, 255, 255, .8); */
+    /* background: 0 0; */
     border-radius: 0;
     overflow-x: auto;
     word-break: break-all;
