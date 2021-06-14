@@ -1,9 +1,11 @@
 {{- if or .Params.author .Site.Params.author }}
-{{- $author := (.Params.author | default .Site.Params.author) }}
-{{- $author_type := (printf "%T" $author) }}
-{{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
-{{- (delimit $author ", " ) }}
-{{- else }}
-{{- $author }}
-{{- end }}
+    {{- $author := (.Params.author | default .Site.Params.author) }}
+    <!-- Todo: Add support for more than one author -->
+	{{- with $author }}
+		{{- range . }}
+		    <span>
+		        <a href={{- trim .url " " }} rel="noopener noreferrer">{{- .name }}</a>
+			</span>
+        {{- end }}
+    {{- end }}
 {{- end -}}
